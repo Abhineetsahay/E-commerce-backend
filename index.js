@@ -13,10 +13,11 @@ app.use(express.json());
 
 const route = require("./routes/AuthRoute");
 const cartRoute=require("./routes/CartRoute");
+const productData=require("./routes/ProductRoute");
 
 app.use("/api/v1", route);
 app.use("/api/cart",cartRoute);
-
+app.use("/api/product",productData);
 
 app.listen(PORT, () => {
   console.log(`Server started at Port No. ${PORT}`);
