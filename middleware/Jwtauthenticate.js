@@ -17,7 +17,9 @@ exports.authenticateToken = async (req, res, next) => {
         message: "Invalid token",
       });
     }
-    req.user = decoded; // Attach user payload to request object
+    req.user = decoded; 
+    console.log();
+    
     next();
   });
 };

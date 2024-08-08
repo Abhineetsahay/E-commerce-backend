@@ -3,7 +3,7 @@ const UserCart = require("../models/Cart");
 exports.addCartItem = async (req, res) => {
   try {
     const { name, phone } = req.user;
-    const { id, description, price, title } = req.body;
+    const { id, description, price, title,image } = req.body;
 
     if (!description || !id || !price || !title) {
       return res.status(400).json({
@@ -23,7 +23,7 @@ exports.addCartItem = async (req, res) => {
     if (itemFound) {
       itemFound.Quantity++;
     } else {
-      user.cart.push({ id, description, price, title, quantity: 1 });
+      user.cart.push({ id, description, price, title,image, quantity: 1 });
     }
 
     await user.save();

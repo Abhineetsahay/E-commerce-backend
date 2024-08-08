@@ -5,6 +5,7 @@ exports.generateJwtToken = (user) => {
     id:user._id,
     name:user.name,
     phone:user.phone,
+    role: user.role,
   };
   const accessToken = jwt.sign(payload, process.env.JWT_SECRET, {
     expiresIn: "5hr",
