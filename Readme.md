@@ -30,8 +30,9 @@ This is the backend service for an E-commerce platform. It is built using Node.j
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 14.x or higher)
-- [MongoDB](https://www.mongodb.com/) (running locally or on a cloud service like MongoDB Atlas)
+- [Node.js]
+- [Express.js]
+- [MongoDB]
 
 ### Installation
 
