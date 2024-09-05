@@ -13,7 +13,6 @@ This is the backend service for an E-commerce platform. It is built using Node.j
 
 - User authentication and authorization (Admin and User roles)
 - Product management (CRUD operations)
-- Order processing and management
 - Secure API with JWT-based authentication
 - Password hashing using bcrypt
 
