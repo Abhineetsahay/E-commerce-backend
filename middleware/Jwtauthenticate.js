@@ -10,7 +10,7 @@ exports.authenticateToken = async (req, res, next) => {
     });
   }
   const token = header.split(" ")[1];
-  jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
       return res.status(401).json({
         success: false,
@@ -18,8 +18,6 @@ exports.authenticateToken = async (req, res, next) => {
       });
     }
     req.user = decoded; 
-    console.log();
-    
     next();
   });
 };

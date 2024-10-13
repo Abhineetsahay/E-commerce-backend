@@ -19,6 +19,9 @@ app.use("/api/v1", route);
 app.use("/api/cart",cartRoute);
 app.use("/api/product",productData);
 
+app.get("/", (req, res) => {
+  res.send("<p>Hello, this is your Express server!</p>");
+});
 app.listen(PORT, () => {
   console.log(`Server started at Port No. ${PORT}`);
 });
